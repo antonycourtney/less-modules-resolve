@@ -7,6 +7,7 @@
     "babel-preset-es2015-node6": "^0.3.0",
     "css-loader": "^0.25.0",
     "file-loader": "^0.9.0",
+    "image-webpack-loader": "^3.3.1",
     "less": "^2.7.1",
     "less-loader": "^2.2.3",
     "raw-loader": "^0.5.1",
@@ -15,5 +16,8 @@
   },
   "scripts": {
     "build": "webpack"
+  },
+  "dependencies": {
+    "slickgrid-es6": "^2.0.5"
   }
 }

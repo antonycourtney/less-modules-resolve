@@ -12,16 +12,18 @@ module.exports = {
       // Css loaders
       {
         test: /\.less$/,
+        loader: 'style-loader!css-loader!less-loader'
+      },
+      {
+        test: /\.(jpe?g|png|gif|svg)$/i,
         loaders: [
-          'style?sourceMap',
-          'css?modules',
-          'less?sourceMap'
+            'file-loader?hash=sha512&digest=hex&name=[hash].[ext]',
+            'image-webpack-loader?bypassOnDebug&optipng.optimizationLevel=7&gifsicle.interlaced=false'
         ]
       },
-      // File loader to handle font imports
       {
         test: /\.(eot|svg|ttf|woff|woff2)$/,
-        loader: 'file?name=[name].[ext]'
+        loader: 'file-loader?name=public/fonts/[name].[ext]'
       },
       // Finally, babel everything left
       {
